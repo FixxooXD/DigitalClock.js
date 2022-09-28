@@ -43,18 +43,40 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F89999", en
            <!-- For sizing -->
             <div class=" ml-auto mr-auto  w-96">
             <div class="Triple_Div flex flex-row justify-center justify-space justify-between ">
-                 <div class=" bg-white w-24 h-24  flex justify-center items-center rounded-lg shadow-2xl"><span id="" class="triple_div text-5xl p-2">22</span></div>
+                 <div class=" bg-white w-24 h-24  flex justify-center items-center rounded-lg shadow-2xl"><span id="hours" class="triple_div text-5xl p-2">22</span></div>
                  <div class="flex justify-center items-center "><span class="text-white text-6xl">:</span></div>
-                 <div class="bg-white w-24 h-24 flex justify-center items-center rounded-lg shadow-2xl"><span class="triple_div text-5xl">10</span></div>
+                 <div class="bg-white w-24 h-24 flex justify-center items-center rounded-lg shadow-2xl"><span id="mins" class="triple_div text-5xl">10</span></div>
                  <div class="flex justify-center items-center"><span class="text-white text-6xl">:</span></div>
-                 <div class="bg-white w-24 h-24 flex justify-center items-center rounded-lg shadow-2xl"><span class="triple_div text-5xl">30</span></div>
+                 <div class="bg-white w-24 h-24 flex justify-center items-center rounded-lg shadow-2xl"><span id="secs" class="triple_div text-5xl">30</span></div>
             </div>
             </div>  
             </div>
             </div>
           </div>
           <!-- npx tailwindcss -i ./src/tailwind.css -o ./style.css --watch -->
-    
+    <script>
+        let hours = document.getElementById("hours");
+        let minutes = document.getElementById("mins");
+        let seconds = document.getElementById("secs");
+
+     function dateTimee(){
+            var dateTime  = new Date();
+            var  hrs = dateTime.getHours();
+             var min =dateTime.getMinutes();
+             var sec = dateTime.getSeconds();
+    //     var dateTime = new Date();
+    // var hrs = dateTime.getHours();
+    // var min = dateTime.getMinutes();
+    // var sec = dateTime.getSeconds();
+    var session = document.getElementById('session');
+
+    hours.innerHTML = hrs;
+    minutes.innerHTML = min;
+    seconds.innerHTML = sec;
+       
+}
+        setInterval(dateTimee,10);
+    </script>
 
 </body>
 </html>
