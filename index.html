@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Nunito&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        span{
+            font-family: 'Bebas Neue', cursive;
+        }
+        .triple_div{
+            font-family: 'Bebas Neue', cursive;
+            color: #222;
+        }
+        .format{
+            color: #222;
+        }
+         .theBody{
+            background: hsla(0, 87%, 79%, 1);
+
+background: linear-gradient(90deg, hsla(0, 87%, 79%, 1) 0%, hsla(6, 77%, 85%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(0, 87%, 79%, 1) 0%, hsla(6, 77%, 85%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(0, 87%, 79%, 1) 0%, hsla(6, 77%, 85%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F89999", endColorstr="#F6C0BA", GradientType=1 );
+         }
+       
+    </style>
+    
+    <title>Document</title>
+</head>
+<body class="flex">
+    <!-- main ContentDiv -->
+    <div style="background-image: linear-gradient();
+    " class="theBody  w-2/4  h-72  ml-auto mr-auto mt-16">
+    <!-- componenets -->
+            <div class="text-center mr-52 mt-8 mb-2"><span class="format bg-white font-Anton text-xl px-5">24 HR FORMAT</span></div>
+            <div class="text-white text-bold  text-center text-4xl mb-5"><span class="text-white font-extrabold text-6xl tracking-widest ">DIGITAL CLOCK</span></div>
+           <!-- For sizing -->
+            <div class=" ml-auto mr-auto  w-96">
+            <div class="Triple_Div flex flex-row justify-center justify-space justify-between ">
+                 <div class=" bg-white w-24 h-24  flex justify-center items-center rounded-lg shadow-2xl"><span id="" class="triple_div text-5xl p-2">22</span></div>
+                 <div class="flex justify-center items-center "><span class="text-white text-6xl">:</span></div>
+                 <div class="bg-white w-24 h-24 flex justify-center items-center rounded-lg shadow-2xl"><span class="triple_div text-5xl">10</span></div>
+                 <div class="flex justify-center items-center"><span class="text-white text-6xl">:</span></div>
+                 <div class="bg-white w-24 h-24 flex justify-center items-center rounded-lg shadow-2xl"><span class="triple_div text-5xl">30</span></div>
+            </div>
+            </div>  
+            </div>
+            </div>
+          </div>
+          <!-- npx tailwindcss -i ./src/tailwind.css -o ./style.css --watch -->
+    
+
+</body>
+</html>
