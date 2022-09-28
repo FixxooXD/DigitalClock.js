@@ -64,18 +64,13 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F89999", en
             var  hrs = dateTime.getHours();
              var min =dateTime.getMinutes();
              var sec = dateTime.getSeconds();
-    //     var dateTime = new Date();
-    // var hrs = dateTime.getHours();
-    // var min = dateTime.getMinutes();
-    // var sec = dateTime.getSeconds();
     var session = document.getElementById('session');
 
     hours.innerHTML = hrs;
     minutes.innerHTML = min;
     seconds.innerHTML = sec;
-       
 }
-        setInterval(dateTimee,10);
+        setInterval(dateTimee,1000);
     </script>
 
 </body>
