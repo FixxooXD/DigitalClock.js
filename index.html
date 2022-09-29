@@ -10,9 +10,12 @@
         span{
             font-family: 'Bebas Neue', cursive;
         }
-        .triple_div{
+        .triple_div.session{
             font-family: 'Bebas Neue', cursive;
             color: #222;
+        }
+        #text{
+            font-family: 'Bebas Neue', cursive;
         }
         .format{
             color: #222;
@@ -33,10 +36,10 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F89999", en
     
     <title>Digital Clock(24hrs)</title>
 </head>
-<body class="flex">
+<body  class="flex">
     <!-- main ContentDiv -->
     <div style="background-image: linear-gradient();
-    " class="theBody  w-2/4  h-72  ml-auto mr-auto mt-16">
+    " class="theBody  w-2/4  h-72  ml-auto mr-auto mt-16 shadow-2xl">
     <!-- componenets -->
             <div class="text-center mr-52 mt-8 mb-2"><span class="format bg-white font-Anton text-xl px-5">24 HR FORMAT</span></div>
             <div class="text-white text-bold  text-center text-4xl mb-5"><span class="text-white font-extrabold text-6xl tracking-widest ">DIGITAL CLOCK</span></div>
@@ -48,11 +51,14 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F89999", en
                  <div class="bg-white w-24 h-24 flex justify-center items-center rounded-lg shadow-2xl"><span id="mins" class="triple_div text-5xl">10</span></div>
                  <div class="flex justify-center items-center"><span class="text-white text-6xl">:</span></div>
                  <div class="bg-white w-24 h-24 flex justify-center items-center rounded-lg shadow-2xl"><span id="secs" class="triple_div text-5xl">30</span></div>
+                 <div><span id="sessions" class="session">AM</span></div>
             </div>
-            </div>  
+            <div><p id="text " class="text-white">Is this looking cute???</p></div> 
+            </div> 
             </div>
             </div>
           </div>
+          
           <!-- npx tailwindcss -i ./src/tailwind.css -o ./style.css --watch -->
     <script>
         let hours = document.getElementById("hours");
@@ -62,13 +68,23 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F89999", en
      function dateTimee(){
             var dateTime  = new Date();
             var  hrs = dateTime.getHours();
-             var min =dateTime.getMinutes();
-             var sec = dateTime.getSeconds();
-    var session = document.getElementById('session');
+            var min =dateTime.getMinutes();
+            var sec = dateTime.getSeconds();
+            let  am_pm = "AM";
+    var session = document.getElementById('sessions');
+       if (hrs > 12) {
+        hours -= 12;
+        am_pm = "PM";
+       }
+       if (hrs == 12) {
+          hours =12;
+          am_pm = "AM";
+       }
 
     hours.innerHTML = hrs;
     minutes.innerHTML = min;
     seconds.innerHTML = sec;
+    session.innerHTML = am_pm;
 }
         setInterval(dateTimee,1000);
     </script>
