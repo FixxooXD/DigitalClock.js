@@ -80,15 +80,10 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F89999", en
            hrs =12;
         am_pm = "AM";
         }
-    // if (hrs > 12) {
-    //     hrs -= 12;
-    //     am_pm = "PM";
-    // }
-    // if (hrs == 0) {
-    //     hrs = 12;
-    //     am_pm = "AM";
-    // }
-
+        if (hrs >=12) {
+            am_pm = "PM";
+        }
+   
     hours.innerHTML = hrs;
     minutes.innerHTML = min;
     seconds.innerHTML = sec;
